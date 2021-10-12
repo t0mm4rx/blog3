@@ -18,6 +18,7 @@ h1 {
 
 h2 {
 	font-size: 30px;
+	margin-top: 40px;
 }
 
 h3 {
@@ -38,7 +39,7 @@ a.no-underline {
 }
 
 main {
-	max-width: 800px;
+	max-width: 700px;
 	padding: 0px 20px;
 	margin: 40px auto;
 }
@@ -50,7 +51,11 @@ main {
 	align-items: flex-start;
 }
 
-.cols > div {
+.cols > div:nth-child(1) {
+	flex: 2;
+}
+
+.cols > div:nth-child(2) {
 	flex: 1;
 }
 
