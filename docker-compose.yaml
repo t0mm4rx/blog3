@@ -1,17 +1,19 @@
-version: '3.8'
+version: "3.8"
 
 services:
   ghost:
     image: ghost:4-alpine
     restart: always
-    environment:
-      url: http://localhost:8080
-      NODE_ENV: development
+    env_file: .env
+    ports:
+      - "2368:2368"
     volumes:
       - ghost:/var/lib/ghost/content
       - ./theme:/var/lib/ghost/content/themes/theme
+
   https_proxy:
     image: nginx:1.21-alpine
+    restart: always
     ports:
       - "443:443"
       - "80:80"
@@ -19,6 +21,8 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./server.cert:/root/server.cert
       - ./server.key:/root/server.key
+    depends_on:
+      - ghost
 
 volumes:
   ghost:
