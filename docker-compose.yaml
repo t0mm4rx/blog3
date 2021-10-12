@@ -4,14 +4,21 @@ services:
   ghost:
     image: ghost:4-alpine
     restart: always
-    ports:
-      - 8080:2368
     environment:
       url: http://localhost:8080
       NODE_ENV: development
     volumes:
       - ghost:/var/lib/ghost/content
       - ./theme:/var/lib/ghost/content/themes/theme
+  https_proxy:
+    image: nginx:1.21-alpine
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./server.cert:/root/server.cert
+      - ./server.key:/root/server.key
 
 volumes:
   ghost:
