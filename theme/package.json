@@ -1,0 +1,17 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "author": {
+    "email": "tom@tommarx.fr",
+    "name": "Tom Marx"
+  },
+  "config": {
+    "posts_per_page": 20
+  },
+  "keywords": ["ghost-theme"]
+}

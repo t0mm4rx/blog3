@@ -1,0 +1,49 @@
+{{!< default}}
+
+<main>
+	<h1>Tom Marx</h1>
+	<p>I am Tom, passionate about programming since my young age. I currently freelance for consulting firms, startups, and schools. I am also involved in multiple early-stage startups, as an advisor or CTO. I am a student at 42 in Paris.</p>
+
+	<p>As a fan of quantitative finance, crypto-currencies, and AI, I co-founded capsa, a crypto hedge fund. I design all the technical infrastructure, and create quantitative trading strategies.</p>
+
+	<div class="cols">
+		<div>
+			<h2>Work</h2>
+			<ul>
+				<li>Co-founder of <a href="https://capsa.finance" target="_blank">capsa.finance</a></li>
+				<li>AI Teacher at EMLyon (top french business school)</li>
+				<li><a href="https://www.youtube.com/watch?v=5lF07fDPQiM&list=PLDGFkemIAJ9oPJE0GpJ--k0qO1xstTpJW" target="_blank">Sport betting arbitrage video series</a> (in french)</li>
+				<li><a href="https://tripconnexion.com" target="_blank">tripconnexion.com</a> front-end</li>
+				<li>Multiple travel mobile apps</li>
+				<li>Founder of basket-events.com, basketball events marketplace</li>
+				<li><a href="https://github.com/t0mm4rx/OpenBet2" target="_blank">OpenBet</a>, an AI predicting horse racing outcomes, beating the average player</li>
+			</ul>
+		</div>
+		<div>
+			<h2>Contact</h2>
+			<ul>
+				<li><a href="mailto:tom@tommarx.fr">Mail</a></li>
+				<li><a href="https://github.com/t0mm4rx/" target="_blank">Github</a></li>
+				<li><a href="https://www.malt.fr/profile/tommarx" target="_blank">Malt</a></li>
+				<li><a href="https://t.me/airtommarx" target="_blank">Telegram</a></li>
+				<li><a href="https://www.youtube.com/channel/UC6GGxaW3sarX-x6hGQvEVIg" target="_blank">Youtube</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div>
+		<h2>Articles</h2>
+		{{#foreach posts}}
+			<a href="{{url}}" class="no-underline">
+				<article class="{{post_class}}">
+					<div class="article-header">
+						<h3>{{title}}</h3>
+						<span>{{date published_at}}</span>
+					</div>
+					<p>{{excerpt characters="170"}}</p>
+				</article>
+			</a>
+		{{/foreach}}
+	</div>
+
+</main>

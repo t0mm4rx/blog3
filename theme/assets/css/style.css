@@ -1,0 +1,120 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: "inconsolata";
+	color: #333;
+	font-size: 20px;
+}
+
+h1, h2, h3 {
+	font-family: "Libre Baskerville";
+	font-weight: 400;
+	margin: 20px 0px;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+a {
+	color: #333;
+	transition: color .3s ease;
+}
+
+a:hover {
+	color: #ccc;
+}
+
+a.no-underline {
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	padding: 0px 20px;
+	margin: 40px auto;
+}
+
+.cols {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.cols > div {
+	flex: 1;
+}
+
+ul {
+	list-style-type: "→ ";
+	padding-inline-start: 40px;
+}
+
+article {
+	margin: 20px 0px;
+}
+
+article p {
+	margin-top: 0px;
+}
+
+article h3 {
+	margin: 5px 0px;
+}
+
+article .article-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+article .article-header span {
+	text-align: right;
+	font-style: italic;
+}
+
+.kg-card {
+	width: 100%;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.kg-card .kg-image {
+	max-width: 100%;
+	height: auto;
+}
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+}
+
+.date {
+	font-style: italic;
+}
+
+.kg-bookmark-thumbnail {}
+.kg-bookmark-publisher {}
+.kg-bookmark-author {}
+.kg-bookmark-icon {}
+.kg-bookmark-metadata {}
+.kg-bookmark-description {}
+.kg-bookmark-title {}
+.kg-bookmark-content {}
+.kg-bookmark-container {}
+.kg-bookmark-card {}
+.kg-gallery-image {}
+.kg-gallery-row {}
+.kg-gallery-container {}
+

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ghost:
+    image: ghost:4-alpine
+    restart: always
+    ports:
+      - 8080:2368
+    environment:
+      url: http://localhost:8080
+      NODE_ENV: development
+    volumes:
+      - ghost:/var/lib/ghost/content
+      - ./theme:/var/lib/ghost/content/themes/theme
+
+volumes:
+  ghost:
