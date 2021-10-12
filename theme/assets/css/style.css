@@ -95,6 +95,10 @@ article .article-header span {
 	height: auto;
 }
 
+.kg-image-card {
+	text-align: center;
+}
+
 figcaption {
 	font-style: italic;
 	text-align: center;
