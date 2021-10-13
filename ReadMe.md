@@ -1,3 +1,5 @@
+![Screenshot of tommarx.fr](./screenshot.png)
+
 # My personal blog and website
 
 I wanted a minimalist blog engine, so I choose ghost.
