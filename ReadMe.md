@@ -11,6 +11,8 @@ This project is composed of:
 - A nginx reverse proxy to provide a SSL connection (official nginx image, with custom config)
 - A custom and minimalist ghost theme, composed of only two page templates (home page and post)
 
+The SSL certificates are self-signed, and will allow you to serve your app in https only in local.
+
 ## Run
 
 Here is the .env template that I use:
