@@ -4,6 +4,8 @@ I wanted a minimalist blog engine, so I choose ghost.
 
 I created my own theme, available in ./theme.
 
+[See it live](https://tommarx.fr)
+
 ## Architecture
 
 This project is composed of:
