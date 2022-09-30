@@ -1,0 +1,5 @@
+tommarx.fr {
+	reverse_proxy ghost:2368 
+	tls tom@tommarx.fr
+}
+

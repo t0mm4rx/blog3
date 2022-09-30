@@ -11,18 +11,29 @@ services:
       - ghost:/var/lib/ghost/content
       - ./theme:/var/lib/ghost/content/themes/theme
 
-  https_proxy:
-    image: nginx:1.21-alpine
-    restart: always
-    ports:
-      - "443:443"
-      - "80:80"
+        #https_proxy:
+        #image: nginx:1.21-alpine
+        #restart: always
+        #ports:
+        #- "443:443"
+        #- "80:80"
+        #volumes:
+        #- ./nginx.conf:/etc/nginx/nginx.conf
+        #- /etc/letsencrypt/live/tommarx.fr-0001/fullchain.pem:/root/server.cert
+        #- /etc/letsencrypt/live/tommarx.fr-0001/privkey.pem:/root/server.key
+        #depends_on:
+        #- ghost
+
+  proxy:
+    image: caddy
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./server.cert:/root/server.cert
-      - ./server.key:/root/server.key
-    depends_on:
-      - ghost
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy:/data
+    env_file: .env
+    ports:
+      - "80:80" # To complete HTTPS challenge
+      - "443:443"
 
 volumes:
   ghost:
+  caddy:
